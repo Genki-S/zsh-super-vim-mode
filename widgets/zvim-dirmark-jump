@@ -1,0 +1,11 @@
+# Prompt one character M with mini-buffer, and jump to zvim_dirmarks[M]
+
+local REPLY
+read-from-minibuffer -k 1 "Mark:"
+if [ -z "$zvim_dirmarks[$REPLY]" ]; then
+	return 1
+fi
+cd $zvim_dirmarks[$REPLY]
+
+# Update prompt
+zle reset-prompt

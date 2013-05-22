@@ -1,0 +1,3 @@
+# Save directory marks to the save file
+
+echo ${(kv)zvim_dirmarks} > $zvim_dirmarks_save_file

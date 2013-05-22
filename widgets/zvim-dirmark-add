@@ -1,0 +1,9 @@
+# Prompt one character M with mini-buffer, and add $PWD to mark M
+
+local REPLY
+read-from-minibuffer -k 1 "Mark:"
+if [[ ! $REPLY =~ [a-zA-Z] ]]; then
+	return 1
+fi
+zvim_dirmarks[$REPLY]=$PWD
+zvim-dirmark-save

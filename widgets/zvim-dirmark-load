@@ -1,0 +1,4 @@
+# Load directory marks from the save file
+
+[ -e $zvim_dirmarks_save_file ] || touch $zvim_dirmarks_save_file
+zvim_dirmarks=(`cat $zvim_dirmarks_save_file`)

@@ -1,0 +1,6 @@
+# List all directory marks
+
+for k in ${(k)zvim_dirmarks}
+do
+	echo $k ":" $zvim_dirmarks[$k]
+done
