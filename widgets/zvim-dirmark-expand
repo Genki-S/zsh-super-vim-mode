@@ -1,0 +1,5 @@
+# Prompt a mark and expand directory
+
+local REPLY
+read-from-minibuffer -k 1 "Mark:"
+LBUFFER+=${zvim_dirmarks[$REPLY]}

@@ -36,3 +36,4 @@ fi
 # Directory Mark bindings
 bindkey -M vicmd 'm' zvim-dirmark-add
 bindkey -M vicmd '`' zvim-dirmark-jump
+bindkey '^_' zvim-dirmark-expand
