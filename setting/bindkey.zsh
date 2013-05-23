@@ -1,5 +1,11 @@
 # Use vi binding
-bindkey -v
+if [ -z $zvim_use_emacs_binding ]; then
+	bindkey -v
+else
+	# Use emacs bindings in insert mode, but provide some vi-like bindings
+	bindkey -e
+	bindkey '^[' vi-cmd-mode
+fi
 
 # vicmd bindings
 bindkey -M vicmd 'Y' vi-yank-eol
